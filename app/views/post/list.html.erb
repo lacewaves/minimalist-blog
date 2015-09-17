@@ -1,0 +1,18 @@
+<h1>Welcome!</h1>
+
+<%= link_to new_post_path do %>
+  Add New Post
+<% end %>
+
+<div class="posts">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <%= link_to "/post/#{post.id}" do %>
+        <%= post.title %>
+      <% end %>
+      <p><%= post.body %></p>
+
+    </div>
+  <% end %>
+
+</div>
